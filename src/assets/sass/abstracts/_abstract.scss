@@ -1,0 +1,37 @@
+$primary-color: #f7f7f7;
+$secondary-color: #191a19;
+$site-color: #387cfc;
+$font-family: 'Arial, sans-serif';
+
+
+:root {
+    background-color: $primary-color;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-page-div {
+    background-color: $primary-color;
+}
+
+.landing-page-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+    // @include flex-center()
+    // height: 65vh;
+}
+
+.site-text {
+    color: $site-color;
+    text-decoration: underline rgb(223, 211, 102);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

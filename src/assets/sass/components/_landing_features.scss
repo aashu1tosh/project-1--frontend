@@ -1,0 +1,28 @@
+.landing-features {
+    // @include flex-center;
+    margin-top: 20px;
+
+    h1 {
+        text-align: center;
+    }
+
+    div {
+        @include flex-center;
+        flex-wrap: wrap;
+
+
+        .feature-card {
+            border: 1px solid $site-color;
+            background-color: white;
+            border-radius: 9px;
+            width: 380px;
+            padding: 30px;
+            margin: 7px;
+            flex-direction: column;
+
+            * {
+                padding: 5px;
+            }
+        }
+    }
+}

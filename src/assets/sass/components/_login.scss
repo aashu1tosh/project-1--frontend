@@ -1,0 +1,20 @@
+.login {
+    @include flex-center;
+    flex-direction: column;
+    height: 400px;
+    // background-color: red;
+    // border: 2px solid red;
+    height: 100%;
+    padding: 10% 10px;
+
+    h2 {
+        padding: 10px;
+        color: $secondary-color;
+    }
+
+    img {
+        padding: 20px;
+        height: 100px;
+        width: auto;
+    }
+}

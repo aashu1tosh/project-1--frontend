@@ -1,0 +1,58 @@
+.landing-footer {
+    width: 100%;
+    margin-top: 25px;
+    background-color: transparent;
+    color: $secondary-color;
+    border-top: 1px solid black;
+
+    div {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1300px;
+
+        @include flex-center;
+        justify-content: space-between;
+        padding: 1rem;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+
+        .footer-logo {
+            img {
+                max-height: 30px;
+                width: auto;
+            }
+
+            cursor: pointer;
+        }
+
+        .footer-links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-left: 1rem;
+                cursor: pointer;
+                transition: color 0.3s;
+                @include flex-center;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    .copyright-section {
+        flex-direction: column;
+
+        p {
+            text-align: center;
+        }
+    }
+
+}

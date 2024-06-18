@@ -1,0 +1,167 @@
+/* Variables */
+$rocker-font-size: 1.5em; // 75% of the original
+$rocker-width: 5.25em; // 75% of the original
+$rocker-height: 3em; // 75% of the original
+$switch-height: 1.875em; // 75% of the original
+$switch-width: 2.25em; // 75% of the original
+$switch-small-font-size: 0.5625em; // 75% of the original
+$switch-margin: 0.75em; // 75% of the original
+$border-color: #eee;
+$bg-color: #999;
+$color: #888;
+$hover-bg-color: #bd5757;
+$hover-color: #fff;
+$focus-color: #333;
+$checked-bg-color: #0084d0;
+
+/* Mixins */
+@mixin switch-transform($rotate, $skewX) {
+    transform: rotate($rotate) skewX($skewX);
+}
+
+/* Switch starts here */
+.rocker {
+    display: inline-block;
+    position: relative;
+    rotate: 90deg;
+    z-index: 100;
+    /*
+  SIZE OF SWITCH
+  ==============
+  All sizes are in em - therefore
+  changing the font-size here
+  will change the size of the switch.
+  See .rocker-small below as example.
+  */
+    font-size: $rocker-font-size; // 75% of the original
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color;
+    width: $rocker-width; // 75% of the original
+    height: $rocker-height; // 75% of the original
+    overflow: hidden;
+    border-bottom: 0.375em solid $border-color; // 75% of the original
+    overflow: visible;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0.375em; // 75% of the original
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $bg-color;
+        border: 0.375em solid $border-color; // 75% of the original
+        border-bottom: 0;
+    }
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.rocker-small {
+    font-size: $switch-small-font-size; // 75% of the original
+    /* Sizes the switch */
+    margin: $switch-margin; // 75% of the original
+}
+
+.switch-left,
+.switch-right {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $switch-height; // 75% of the original
+    width: $switch-width; // 75% of the original
+    transition: 0.2s;
+    user-select: none;
+}
+
+.switch-left {
+    height: 1.8em; // 75% of the original
+    width: 2.0625em; // 75% of the original
+    left: 0.6375em; // 75% of the original
+    bottom: 0.3em; // 75% of the original
+    background-color: #ddd;
+    @include switch-transform(15deg, 15deg);
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0.3em; // 75% of the original
+        height: 1.8375em; // 75% of the original
+        bottom: -0.3375em; // 75% of the original
+        background-color: #ccc;
+        transform: skewY(-65deg);
+        left: -0.3em; // 75% of the original
+    }
+}
+
+.switch-right {
+    right: 0.375em; // 75% of the original
+    bottom: 0;
+    background-color: $hover-bg-color;
+    color: $hover-color;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0.3em; // 75% of the original
+        height: 1.8375em; // 75% of the original
+        bottom: -0.3375em; // 75% of the original
+        background-color: transparent;
+        transform: skewY(65deg);
+        right: -0.28125em; // 75% of the original
+    }
+}
+
+input:checked+.switch-left {
+    background-color: $checked-bg-color;
+    color: $hover-color;
+    bottom: 0px;
+    left: 0.375em; // 75% of the original
+    height: $switch-height; // 75% of the original
+    width: $switch-width; // 75% of the original
+    @include switch-transform(0deg, 0deg);
+
+    &::before {
+        background-color: transparent;
+        width: 2.3125em; // 75% of the original
+    }
+}
+
+input:checked+.switch-left+.switch-right {
+    background-color: #ddd;
+    color: $color;
+    bottom: 0.3em; // 75% of the original
+    right: 0.6em; // 75% of the original
+    height: 1.8em; // 75% of the original
+    width: 2.0625em; // 75% of the original
+    @include switch-transform(-15deg, -15deg);
+
+    &::before {
+        background-color: #ccc;
+    }
+}
+
+/* Keyboard Users */
+input:focus+.switch-left {
+    color: $focus-color;
+}
+
+input:checked:focus+.switch-left {
+    color: $hover-color;
+}
+
+input:focus+.switch-left+.switch-right {
+    color: $hover-color;
+}
+
+input:checked:focus+.switch-left+.switch-right {
+    color: $focus-color;
+}
