@@ -1,0 +1,50 @@
+// sass/components/_navbar.scss
+
+// Variables
+// $primary-color: #3498db;
+// $secondary-color: #2ecc71;
+// $font-color: #333;
+// $font-family: 'Arial, sans-serif';
+
+
+// Navigation styles
+#landing-page {
+    background-color: transparent;
+    color: $secondary-color;
+    @include flex-center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    z-index: 1000;
+
+    .navbar-logo {
+        img {
+            max-height: 30px;
+            width: auto;
+        }
+
+        cursor: pointer;
+    }
+
+    .navbar-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-left: 1rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            @include flex-center;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+// Theme toggle button styles
+.ThemeToggleButton {
+    cursor: pointer;
+}

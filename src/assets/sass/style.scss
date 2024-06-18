@@ -1,0 +1,43 @@
+// sass/style.scss
+
+// Importing variables and mixins (if any)
+@import 'abstracts/abstract';
+// @import 'abstracts/mixins';
+
+// Import base styles (if any)
+// @import 'base/reset';
+// @import 'base/typography';
+
+// Import utilities (if any)
+// @import 'utilities/functions';
+// @import 'utilities/mixins';
+
+// Import components
+@import 'components/navbar';
+@import 'components/themetogglebutton';
+@import 'components/landing_hero';
+@import 'components/slanted_card';
+@import 'components/landing_tools';
+@import 'components/landing_features';
+@import 'components/landing_footer';
+@import 'components/login';
+
+@import 'components/common/input_field';
+@import 'components/common//button';
+
+
+
+// Import layout styles (if any)
+// @import 'layout/header';
+// @import 'layout/footer';
+
+// Import page styles (if any)
+// @import 'pages/home';
+// @import 'pages/about';
+
+// Import themes (if any)
+// @import 'themes/dark';
+// @import 'themes/light';
+
+// Import vendor styles (if any)
+// @import 'vendors/font-awesome';

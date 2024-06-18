@@ -1,0 +1,46 @@
+.landing-hero {
+    @include flex-center;
+    justify-content: flex-start;
+    height: 75vh;
+
+    @media (max-width: 1300px) {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-content {
+        padding: 20px;
+        max-width: 620px;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .hero-image-section {
+        @include flex-center;
+        margin-left: 50px;
+        position: absolute;
+        right: -40px;
+        top: 0px;
+        // width: 500px;
+        // overflow: hidden;
+
+        @media (max-width: 1300px) {
+            display: none;
+        }
+
+        .slanted-div {
+            rotate: -20deg;
+            margin-right: 35px;
+            overflow: hidden;
+        }
+    }
+
+
+
+}
