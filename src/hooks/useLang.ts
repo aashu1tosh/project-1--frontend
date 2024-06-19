@@ -3,10 +3,8 @@ import { LanguageContext, LanguageContextType } from '../contexts/LanguageProvid
 
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
-
   if (!context) {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
-  
   return context;
 };
