@@ -1,6 +1,7 @@
 .landing-hero {
     @include flex-center;
     justify-content: flex-start;
+    width: 50vw;
     height: 75vh;
 
     @media (max-width: 1300px) {
@@ -11,6 +12,7 @@
     .hero-content {
         padding: 20px;
         max-width: 620px;
+        flex: 1;
 
         h1 {
             font-size: 40px;
@@ -25,10 +27,11 @@
         @include flex-center;
         margin-left: 50px;
         position: absolute;
-        right: -40px;
+        right: 0px;
         top: 0px;
-        // width: 500px;
-        // overflow: hidden;
+        flex: 1;
+        overflow-y: hidden !important;
+
 
         @media (max-width: 1300px) {
             display: none;
@@ -38,6 +41,12 @@
             rotate: -20deg;
             margin-right: 35px;
             overflow: hidden;
+
+            .card {
+                img {
+                    cursor: pointer;
+                }
+            }
         }
     }
 

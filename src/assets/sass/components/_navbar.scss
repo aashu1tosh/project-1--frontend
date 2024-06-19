@@ -40,6 +40,11 @@
             &:hover {
                 color: $secondary-color;
             }
+
+            img {
+                width: auto;
+                height: 25px;
+            }
         }
     }
 }

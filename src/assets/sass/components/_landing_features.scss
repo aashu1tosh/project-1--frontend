@@ -1,7 +1,7 @@
 .landing-features {
     // @include flex-center;
     margin-top: 20px;
-
+    
     h1 {
         text-align: center;
     }
@@ -9,7 +9,6 @@
     div {
         @include flex-center;
         flex-wrap: wrap;
-
 
         .feature-card {
             border: 1px solid $site-color;
@@ -19,6 +18,12 @@
             padding: 30px;
             margin: 7px;
             flex-direction: column;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 0 24px $site-color;
+                transition: 0.3s ease-out;
+            }
 
             * {
                 padding: 5px;
