@@ -1,6 +1,6 @@
 import { image } from "@config/constant/image"
-import Button from "@ui/common/atom/Button"
-import InputField from "@ui/common/atom/InputField"
+import Button from "@ui/common/atoms/Button"
+import InputField from "@ui/common/atoms/InputField"
 
 const Login = () => {
     return (
