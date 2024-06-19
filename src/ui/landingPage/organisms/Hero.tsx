@@ -1,17 +1,16 @@
-import SlantedCard from "../molecules/SlantedCard";
+import { landingLabel } from "@data/localization/landingPage/main";
+import { useLanguage } from "@hooks/useLang";
+import SlantedCard from "@ui/landingPage/molecules/SlantedCard";
 
 const Hero = () => {
-    // const { language, setLanguage } = useLanguage();
+    const { language, } = useLanguage();
     return (
         <div className="landing-hero">
             <div className="hero-content">
-                <h1>Welcome to theFront</h1>
-                <h1>Where We</h1>
-                <h1>Turn your ideas</h1>
-                <h1>into <span className="site-text">success</span></h1>
-
-
-                {/* <p>theFront will make your product look modern and professional while saving you precious time.</p> */}
+                <h1>{landingLabel?.welcomeTo[language]}</h1>
+                <h1>{landingLabel?.whereWe[language]}</h1>
+                <h1>{landingLabel?.yourIdeas[language]}</h1>
+                <h1>{landingLabel?.into[language]} <span className="site-text">{landingLabel?.success[language]}</span></h1>
             </div>
 
             <div className="hero-image-section">

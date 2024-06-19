@@ -1,11 +1,14 @@
-import ToolsCard from '../molecules/ToolsCard'
+import { landingLabel } from '@data/localization/landingPage/main';
+import { useLanguage } from '@hooks/useLang';
+import ToolsCard from '../molecules/ToolsCard';
 
 const Tools = () => {
+    const { language, } = useLanguage();
     return (
         <div className='landing-tools'>
             <div>
-                <h1>Build accessible React app with speed</h1>
-                <p>Build a beautiful, modern website with flexible, fully customizable, atomic MUI components.</p>
+                <h1>{landingLabel?.buildReact[language]}</h1>
+                <p>{landingLabel?.buildBeautiful[language]}</p>
 
                 <div className='tools-card-container'>
                     <ToolsCard />

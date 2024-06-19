@@ -1,6 +1,9 @@
-import { FaCode } from 'react-icons/fa'
+import { landingLabel } from '@data/localization/landingPage/main';
+import { useLanguage } from '@hooks/useLang';
+import { FaCode } from 'react-icons/fa';
 
 const ToolsCard = () => {
+    const { language, } = useLanguage();
     return (
         <div>
             {/* <FaCode /> */}
@@ -8,9 +11,8 @@ const ToolsCard = () => {
                 <FaCode size={25} />
             </div>
 
-
-            <h1>Built For Developers</h1>
-            <p>theFront is built to make your life easier. Variables, build tooling, documentation, and reusable components.</p>
+            <h1>{landingLabel.buildForDevelopers[language]}</h1>
+            <p>{landingLabel.buildForDesc[language]}</p>
         </div>
     )
 }
