@@ -1,5 +1,6 @@
 import { image } from "@config/constant/image"
-import ThemeToggleButton from "@ui/common/atom/ThemeToggleButton"
+import ThemeToggleButton from "@ui/common/atoms/ThemeToggleButton"
+// import ThemeToggleButton from "@ui/common/atom/ThemeToggleButton"
 import { Link } from "react-router-dom"
 
 const Navbar = () => {

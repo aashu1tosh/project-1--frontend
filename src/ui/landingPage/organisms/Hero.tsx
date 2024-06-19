@@ -1,6 +1,7 @@
-import SlantedCard from "../molecules/SlantedCard"
+import SlantedCard from "../molecules/SlantedCard";
 
 const Hero = () => {
+    // const { language, setLanguage } = useLanguage();
     return (
         <div className="landing-hero">
             <div className="hero-content">
