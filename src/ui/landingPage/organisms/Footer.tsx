@@ -1,9 +1,9 @@
-import { image } from "@config/constant/image"
+import { image } from "@config/constant/image";
 import { footerLabel } from "@data/localization/landingPage/footer";
-import { useLanguage } from "@hooks/useLang"
+import { useLanguage } from "@hooks/useLang";
 
 const Footer = () => {
-    const {language,} = useLanguage();
+    const { language } = useLanguage();
     return (
         <div className="landing-footer">
             <div>
@@ -19,13 +19,13 @@ const Footer = () => {
             </div>
 
             <div className="copyright-section">
-                <p>&copy; {footerLabel?.allRights[language]}</p><br />
+                <p>&copy; {footerLabel?.allRights[language]}</p>
+                <br />
 
                 <p>{footerLabel?.footerContent[language]}</p>
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

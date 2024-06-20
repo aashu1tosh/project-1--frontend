@@ -6,7 +6,7 @@ const ThemeToggleButton = () => {
             <span className="switch-left"></span>
             <span className="switch-right"></span>
         </label>
-    )
-}
+    );
+};
 
-export default ThemeToggleButton
+export default ThemeToggleButton;

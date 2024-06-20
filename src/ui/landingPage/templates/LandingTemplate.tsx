@@ -1,6 +1,6 @@
-import Footer from '@ui/landingPage/organisms/Footer'
-import Navbar from '@ui/landingPage/organisms/Navbar'
-import { Outlet } from 'react-router-dom'
+import Footer from "@ui/landingPage/organisms/Footer";
+import Navbar from "@ui/landingPage/organisms/Navbar";
+import { Outlet } from "react-router-dom";
 
 const LandingTemplate = () => {
     return (
@@ -13,7 +13,7 @@ const LandingTemplate = () => {
             </div>
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default LandingTemplate
+export default LandingTemplate;

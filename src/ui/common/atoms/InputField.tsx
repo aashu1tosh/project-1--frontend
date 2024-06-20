@@ -12,31 +12,36 @@ const InputField: React.FC<InputFieldProps> = ({
     placeholder,
     type = "text",
     name,
-    readOnly = false
+    readOnly = false,
 }) => {
-
     const [showPassword, setShowPassword] = useState<boolean>(false);
 
     const toggleField = () => {
-        setShowPassword(prev => !prev);
+        setShowPassword((prev) => !prev);
     };
 
     return (
         <div className="input-wrapper">
             <input
                 id={name}
-                type={type && type === 'password' ? showPassword ? 'text' : 'password' : 'text'}
+                type={
+                    type && type === "password"
+                        ? showPassword
+                            ? "text"
+                            : "password"
+                        : "text"
+                }
                 readOnly={readOnly}
                 placeholder={placeholder}
-            //   {...register(name, options)}
+                //   {...register(name, options)}
             />
-            {type === "password" &&
-                <span className="icon" onClick={toggleField} >
+            {type === "password" && (
+                <span className="icon" onClick={toggleField}>
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
-                </span>}
+                </span>
+            )}
         </div>
+    );
+};
 
-    )
-}
-
-export default InputField
+export default InputField;

@@ -1,9 +1,9 @@
-import { landingLabel } from '@data/localization/landingPage/main';
-import { useLanguage } from '@hooks/useLang';
-import { FaCode } from 'react-icons/fa';
+import { landingLabel } from "@data/localization/landingPage/main";
+import { useLanguage } from "@hooks/useLang";
+import { FaCode } from "react-icons/fa";
 
 const ToolsCard = () => {
-    const { language, } = useLanguage();
+    const { language } = useLanguage();
     return (
         <div>
             {/* <FaCode /> */}
@@ -14,7 +14,7 @@ const ToolsCard = () => {
             <h1>{landingLabel.buildForDevelopers[language]}</h1>
             <p>{landingLabel.buildForDesc[language]}</p>
         </div>
-    )
-}
+    );
+};
 
-export default ToolsCard
+export default ToolsCard;
