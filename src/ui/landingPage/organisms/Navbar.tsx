@@ -2,11 +2,19 @@ import { image } from "@config/constant/image"
 import { navbarLabel } from "@data/localization/landingPage/navbar"
 import { useLanguage } from "@hooks/useLang"
 import { LanguageEnum } from "@type/global.types"
+import { useEffect, useState } from "react"
 // import ThemeToggleButton from "@ui/common/atom/ThemeToggleButton"
 import { Link } from "react-router-dom"
 
 const Navbar = () => {
     const { language, changeLanguage } = useLanguage();
+    const [sticky, setSticky] = useState<boolean>(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            window.scrollY > 20 ? setSticky(true) : setSticky(false);
+        })
+    }, []);
 
     const handleLanguageChange = () => {
         if (language === LanguageEnum.en) {
@@ -16,7 +24,7 @@ const Navbar = () => {
         }
     }
     return (
-        <nav id='landing-page'>
+        <nav id={`landing-page`} className={sticky ? 'dark-nav' : ""}>
 
             <div className="navbar-logo">
                 <Link to='/'>
