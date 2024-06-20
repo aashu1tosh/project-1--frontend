@@ -1,16 +1,39 @@
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
+
 interface InputFieldProps {
     placeholder?: string;
     type?: string;
     name: string;
+    readOnly?: boolean;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ placeholder, type = "text", name }) => {
+const InputField: React.FC<InputFieldProps> = ({
+    placeholder,
+    type = "text",
+    name,
+    readOnly = false
+}) => {
+
+    const [showPassword, setShowPassword] = useState<boolean>(false);
+
+    const toggleField = () => {
+        setShowPassword(prev => !prev);
+    };
+
     return (
-        <div className="group">
-            <input type={type} className="input" id={name} />
-            <span className="highlight" />
-            <span className="bar" />
-            <label htmlFor={name}>{placeholder}</label>
+        <div className="input-wrapper">
+            <input
+                id={name}
+                type={type && type === 'password' ? showPassword ? 'text' : 'password' : 'text'}
+                readOnly={readOnly}
+                placeholder={placeholder}
+            //   {...register(name, options)}
+            />
+            {type === "password" &&
+                <span className="icon" onClick={toggleField} >
+                    {showPassword ? <FaEye /> : <FaEyeSlash />}
+                </span>}
         </div>
 
     )

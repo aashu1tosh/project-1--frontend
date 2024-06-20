@@ -7,7 +7,7 @@ const ToolsCard = () => {
     return (
         <div>
             {/* <FaCode /> */}
-            <div style={{}}>
+            <div>
                 <FaCode size={25} />
             </div>
 
