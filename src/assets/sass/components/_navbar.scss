@@ -16,6 +16,8 @@
     padding: 1rem;
     position: relative;
     z-index: 1000;
+    position: fixed;
+    width: 99vw;
 
     .navbar-logo {
         img {
@@ -47,6 +49,13 @@
             }
         }
     }
+}
+
+.dark-nav {
+    background-color: $site-color !important;
+    color: white !important;
+    transition: 0.3s;
+
 }
 
 // Theme toggle button styles
