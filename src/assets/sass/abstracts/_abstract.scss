@@ -1,8 +1,8 @@
 $primary-color: #f7f7f7;
+$input-background-color: #e2dfdfe1;
 $secondary-color: #191a19;
 $site-color: #387cfc;
-$font-family: 'Arial, sans-serif';
-
+$font-family: "Arial, sans-serif";
 
 :root {
     background-color: $primary-color;
@@ -16,14 +16,18 @@ $font-family: 'Arial, sans-serif';
 
 .landing-page-div {
     background-color: $primary-color;
-}
+    width: 99vw;
+    overflow-x: hidden !important;
 
-.landing-page-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1300px;
-    // @include flex-center()
-    // height: 65vh;
+    * {
+        overflow-x: hidden !important;
+    }
+
+    .landing-page-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1300px;
+    }
 }
 
 .site-text {

@@ -24,7 +24,7 @@ $checked-bg-color: #0084d0;
     display: inline-block;
     position: relative;
     rotate: 90deg;
-    z-index: 100;
+    z-index: 1000;
     /*
   SIZE OF SWITCH
   ==============
@@ -120,7 +120,7 @@ $checked-bg-color: #0084d0;
     }
 }
 
-input:checked+.switch-left {
+input:checked + .switch-left {
     background-color: $checked-bg-color;
     color: $hover-color;
     bottom: 0px;
@@ -135,7 +135,7 @@ input:checked+.switch-left {
     }
 }
 
-input:checked+.switch-left+.switch-right {
+input:checked + .switch-left + .switch-right {
     background-color: #ddd;
     color: $color;
     bottom: 0.3em; // 75% of the original
@@ -150,18 +150,18 @@ input:checked+.switch-left+.switch-right {
 }
 
 /* Keyboard Users */
-input:focus+.switch-left {
+input:focus + .switch-left {
     color: $focus-color;
 }
 
-input:checked:focus+.switch-left {
+input:checked:focus + .switch-left {
     color: $hover-color;
 }
 
-input:focus+.switch-left+.switch-right {
+input:focus + .switch-left + .switch-right {
     color: $hover-color;
 }
 
-input:checked:focus+.switch-left+.switch-right {
+input:checked:focus + .switch-left + .switch-right {
     color: $focus-color;
 }

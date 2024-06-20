@@ -1,4 +1,4 @@
-import { image } from '@config/constant/image'
+import { image } from "@config/constant/image";
 // import './style.css'
 
 const SlantedCard = () => {
@@ -6,7 +6,7 @@ const SlantedCard = () => {
         <div className="card">
             <img src={image?.heroImage} alt="" />
         </div>
-    )
-}
+    );
+};
 
-export default SlantedCard
+export default SlantedCard;
