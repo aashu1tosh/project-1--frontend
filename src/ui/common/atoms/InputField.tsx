@@ -1,18 +1,22 @@
-import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import React, { useState } from 'react';
+import { UseFormRegister } from 'react-hook-form';
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 interface InputFieldProps {
     placeholder?: string;
     type?: string;
     name: string;
     readOnly?: boolean;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    register: UseFormRegister<any>;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
     placeholder,
-    type = "text",
+    type = 'text',
     name,
     readOnly = false,
+    register,
 }) => {
     const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -21,22 +25,21 @@ const InputField: React.FC<InputFieldProps> = ({
     };
 
     return (
-        <div className="input-wrapper">
+        <div className='input-wrapper'>
             <input
-                id={name}
                 type={
-                    type && type === "password"
+                    type && type === 'password'
                         ? showPassword
-                            ? "text"
-                            : "password"
-                        : "text"
+                            ? 'text'
+                            : 'password'
+                        : 'text'
                 }
                 readOnly={readOnly}
                 placeholder={placeholder}
-                //   {...register(name, options)}
+                {...register(name)}
             />
-            {type === "password" && (
-                <span className="icon" onClick={toggleField}>
+            {type === 'password' && (
+                <span className='icon' onClick={toggleField}>
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
                 </span>
             )}

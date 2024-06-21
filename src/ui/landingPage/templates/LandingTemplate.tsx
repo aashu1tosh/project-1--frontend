@@ -1,13 +1,13 @@
-import Footer from "@ui/landingPage/organisms/Footer";
-import Navbar from "@ui/landingPage/organisms/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import Footer from '../organisms/Footer';
+import Navbar from '../organisms/Navbar';
 
 const LandingTemplate = () => {
     return (
         <>
             <Navbar />
-            <div className="landing-page-div">
-                <div className="landing-page-container">
+            <div className='landing-page-div'>
+                <div className='landing-page-container'>
                     <Outlet />
                 </div>
             </div>

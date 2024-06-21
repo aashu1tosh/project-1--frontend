@@ -1,6 +1,6 @@
-import { landingLabel } from "@data/localization/landingPage/main";
-import { useLanguage } from "@hooks/useLang";
-import { FaCode } from "react-icons/fa";
+import { landingLabel } from '@data/localization/landingPage/main';
+import { useLanguage } from '@hooks/useLang';
+import { FaCode } from 'react-icons/fa';
 
 const ToolsCard = () => {
     const { language } = useLanguage();
