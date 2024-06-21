@@ -43,6 +43,7 @@ const Login = () => {
                     type='email'
                     name='email'
                     register={register}
+                    error={errors?.email}
                 />
 
                 {errors.email && (
@@ -54,6 +55,7 @@ const Login = () => {
                     type='password'
                     name='password'
                     register={register}
+                    error={errors?.password}
                 />
 
                 {errors.password && (
