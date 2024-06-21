@@ -45,7 +45,7 @@ $checked-bg-color: #0084d0;
     overflow: visible;
 
     &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0.375em; // 75% of the original
         left: 0;
@@ -91,7 +91,7 @@ $checked-bg-color: #0084d0;
     @include switch-transform(15deg, 15deg);
 
     &::before {
-        content: "";
+        content: '';
         position: absolute;
         width: 0.3em; // 75% of the original
         height: 1.8375em; // 75% of the original
@@ -109,7 +109,7 @@ $checked-bg-color: #0084d0;
     color: $hover-color;
 
     &::before {
-        content: "";
+        content: '';
         position: absolute;
         width: 0.3em; // 75% of the original
         height: 1.8375em; // 75% of the original
